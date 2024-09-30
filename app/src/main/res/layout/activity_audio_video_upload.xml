@@ -8,31 +8,47 @@
     tools:context=".AudioVideoUploadActivity">
 
     <!-- Title for the Upload Screen -->
+    <!-- Logo ImageView -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/hardhat_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Button to Select Video File -->
+
+    <!-- TextView to Display Selected Video File Name -->
+
     <TextView
         android:id="@+id/upload_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
         android:text="Upload Audio and Video Files"
+        android:textColor="@color/navy_blue"
         android:textSize="24sp"
-        android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="24dp" />
+        app:layout_constraintHorizontal_bias="0.682"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Button to Select Video File -->
     <Button
         android:id="@+id/select_video_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
         android:text="Select Video"
-        app:layout_constraintTop_toBottomOf="@id/upload_title"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upload_title" />
 
-    <!-- TextView to Display Selected Video File Name -->
     <TextView
         android:id="@+id/video_file_name"
         android:layout_width="0dp"
@@ -76,11 +92,13 @@
         android:id="@+id/upload_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Upload Files"
+        android:layout_marginTop="112dp"
+        android:backgroundTint="@color/baby_blue"
         android:enabled="false"
-        android:backgroundTint="@color/purple_500"
-        app:layout_constraintTop_toBottomOf="@id/audio_file_name"
+        android:text="Upload Files"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/audio_file_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
